@@ -3,7 +3,6 @@ import axios from 'axios';
 import {
     Link
 } from "react-router-dom";
-// import moment from "moment";     moment(x.Date).format('DD/MM/YYYY');
 
 const DanhSachPhieuXuat = () => {
     const [deliverys, setDelivery] = useState([]);

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const SanPham = (props) => {
+const SanPham = () => {
     const [products, setProduct] = useState([]);
 
     useEffect(() => {
@@ -12,8 +12,6 @@ const SanPham = (props) => {
       const result = await axios.get("http://localhost:43695/api/Product");
       setProduct(result.data);
     };
-        // console.log(result.data.id);
-
 
     return (
         <section id="main-content">

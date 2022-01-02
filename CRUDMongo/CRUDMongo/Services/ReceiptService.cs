@@ -24,16 +24,17 @@ namespace CRUDMongo.Services
             _phieunhap.InsertOne(phieunhap);
             return phieunhap;
         }
-        public PhieuNhap PutReceipt(string id, PhieuNhap newReceipt)
-        {
-            _phieunhap.ReplaceOne(phieunhap => phieunhap.Id == id, newReceipt);
-            return newReceipt;
-        }
-        public PhieuNhap DeleteReceipt(string id)
-        {
-            var phieunhap = _phieunhap.Find(phieunhap => phieunhap.Id == id).FirstOrDefault();
-            _phieunhap.DeleteOne(phieunhap => phieunhap.Id == id);
-            return phieunhap;
-        }
+
+        //public PhieuNhap PutReceipt(string id, PhieuNhap newReceipt)
+        //{
+        //    _phieunhap.ReplaceOne(phieunhap => phieunhap.Id == id, newReceipt);
+        //    return newReceipt;
+        //}
+        //public PhieuNhap DeleteReceipt(string id)
+        //{
+        //    var phieunhap = _phieunhap.Find(phieunhap => phieunhap.Id == id).FirstOrDefault();
+        //    _phieunhap.DeleteOne(phieunhap => phieunhap.Id == id);
+        //    return phieunhap;
+        //}
     }
 }

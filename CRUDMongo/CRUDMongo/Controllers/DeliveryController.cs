@@ -18,15 +18,21 @@ namespace CRUDMongo.Controllers
         {
             _deliveryService = deliveryService;
         }
+        //Xem danh sách phiếu xuất
         [HttpGet]
-        public ActionResult<List<PhieuXuat>> GetDeliverys() => _deliveryService.GetDeliverys();
-        [HttpGet("{id:length(24)}")]
-        public ActionResult<PhieuXuat> GetDelivery(string id) => _deliveryService.GetDelivery(id);
+        public ActionResult<List<PhieuXuat>> GetDeliveries() => _deliveryService.GetDeliveries();
+
+        //Xem chi tiết phiếu xuất
+        [HttpGet("{maPhieu}")]
+        public ActionResult<PhieuXuat> GetDelivery(string maPhieu) => _deliveryService.GetDelivery(maPhieu);
+
+        //Thêm phiếu xuất
         [HttpPost]
         public ActionResult<PhieuXuat> PostDelivery(PhieuXuat delivery) => _deliveryService.PostDelivery(delivery);
-        [HttpPut("{id:length(24)}")]
-        public ActionResult<PhieuXuat> PutDelivery(string id, PhieuXuat delivery) => _deliveryService.PutDelivery(id, delivery);
-        [HttpDelete("{id:length(24)}")]
-        public ActionResult<PhieuXuat> DeleteDelivery(string id) => _deliveryService.DeleteDelivery(id);
+
+        //[HttpPut("{id:length(24)}")]
+        //public ActionResult<PhieuXuat> PutDelivery(string id, PhieuXuat delivery) => _deliveryService.PutDelivery(id, delivery);
+        //[HttpDelete("{id:length(24)}")]
+        //public ActionResult<PhieuXuat> DeleteDelivery(string id) => _deliveryService.DeleteDelivery(id);
     }
 }

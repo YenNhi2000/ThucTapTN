@@ -18,17 +18,25 @@ namespace CRUDMongo.Controllers
         {
             _productService = productService;
         }
+        //Xem danh sách sản phẩm
         [HttpGet]
         public ActionResult<List<SanPham>> GetProducts() => _productService.GetProducts();
+
+        //Xem chi tiết phiếu nhập
         [HttpGet("{maPhieu}")]
         public ActionResult<List<SanPham>> GetProduct(string maPhieu) => _productService.GetProduct(maPhieu);
-        [HttpPost("{namePro}")]
-        public ActionResult<SanPham> Search(string namePro) => _productService.Search(namePro);
+
+        //Tìm kiếm sản phẩm
+        [HttpPost("{tenSP}")]
+        public ActionResult<SanPham> Search(string tenSP) => _productService.Search(tenSP);
+
+        //Thêm danh sách sản phẩm
         [HttpPost]
         public ActionResult<List<SanPham>> PostProduct(List<SanPham> pro) => _productService.PostProduct(pro);
-        [HttpPut("{id:length(24)}")]
-        public ActionResult<SanPham> PutProduct(string id, SanPham pro) => _productService.PutProduct(id, pro);
-        [HttpDelete("{id:length(24)}")]
-        public ActionResult<SanPham> DeleteProduct(string id) => _productService.DeleteProduct(id);
+
+        //[HttpPut("{id:length(24)}")]
+        //public ActionResult<SanPham> PutProduct(string id, SanPham pro) => _productService.PutProduct(id, pro);
+        //[HttpDelete("{id:length(24)}")]
+        //public ActionResult<SanPham> DeleteProduct(string id) => _productService.DeleteProduct(id);
     }
 }

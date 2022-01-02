@@ -19,22 +19,22 @@ namespace CRUDMongo.Services
         }
         public List<SanPham> GetProducts() => _products.Find(product => true).ToList();
         public List<SanPham> GetProduct(string maPhieu) => _products.Find(product => product.maPN == maPhieu).ToList();
-        public SanPham Search(string namePro) => _products.Find(admin => admin.tenSP == namePro).FirstOrDefault();
+        public SanPham Search(string tenSP) => _products.Find(admin => admin.tenSP == tenSP).FirstOrDefault();
         public List<SanPham> PostProduct(List<SanPham> product)
         {
             _products.InsertMany(product);
             return product;
         }
-        public SanPham PutProduct(string id, SanPham newProduct)
-        {
-            _products.ReplaceOne(product => product.Id == id, newProduct);
-            return newProduct;
-        }
-        public SanPham DeleteProduct(string id)
-        {
-            var product = _products.Find(product => product.Id == id).FirstOrDefault();
-            _products.DeleteOne(product => product.Id == id);
-            return product;
-        }
+        //public SanPham PutProduct(string id, SanPham newProduct)
+        //{
+        //    _products.ReplaceOne(product => product.Id == id, newProduct);
+        //    return newProduct;
+        //}
+        //public SanPham DeleteProduct(string id)
+        //{
+        //    var product = _products.Find(product => product.Id == id).FirstOrDefault();
+        //    _products.DeleteOne(product => product.Id == id);
+        //    return product;
+        //}
     }
 }

@@ -17,23 +17,24 @@ namespace CRUDMongo.Services
             var database = client.GetDatabase("quanlykho");
             _phieuxuat = database.GetCollection<PhieuXuat>("phieuxuat");
         }
-        public List<PhieuXuat> GetDeliverys() => _phieuxuat.Find(phieuxuat => true).ToList();
-        public PhieuXuat GetDelivery(string id) => _phieuxuat.Find(phieuxuat => phieuxuat.Id == id).FirstOrDefault();
+        public List<PhieuXuat> GetDeliveries() => _phieuxuat.Find(phieuxuat => true).ToList();
+        public PhieuXuat GetDelivery(string maPhieu) => _phieuxuat.Find(phieuxuat => phieuxuat.maPhieu == maPhieu).FirstOrDefault();
         public PhieuXuat PostDelivery(PhieuXuat phieuxuat)
         {
             _phieuxuat.InsertOne(phieuxuat);
             return phieuxuat;
         }
-        public PhieuXuat PutDelivery(string id, PhieuXuat newReceipt)
-        {
-            _phieuxuat.ReplaceOne(phieuxuat => phieuxuat.Id == id, newReceipt);
-            return newReceipt;
-        }
-        public PhieuXuat DeleteDelivery(string id)
-        {
-            var phieuxuat = _phieuxuat.Find(phieuxuat => phieuxuat.Id == id).FirstOrDefault();
-            _phieuxuat.DeleteOne(phieuxuat => phieuxuat.Id == id);
-            return phieuxuat;
-        }
+
+        //public PhieuXuat PutDelivery(string id, PhieuXuat newReceipt)
+        //{
+        //    _phieuxuat.ReplaceOne(phieuxuat => phieuxuat.Id == id, newReceipt);
+        //    return newReceipt;
+        //}
+        //public PhieuXuat DeleteDelivery(string id)
+        //{
+        //    var phieuxuat = _phieuxuat.Find(phieuxuat => phieuxuat.Id == id).FirstOrDefault();
+        //    _phieuxuat.DeleteOne(phieuxuat => phieuxuat.Id == id);
+        //    return phieuxuat;
+        //}
     }
 }
