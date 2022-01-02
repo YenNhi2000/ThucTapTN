@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "61ca8c1f6936c15be02170df"
+  },
+  "maPhieu": "PN665",
+  "ngayNhap": "28/12/2021",
+  "tenNV": "Phạm Ngọc Yến Nhi",
+  "tongTien": 100000
+},{
+  "_id": {
+    "$oid": "61cc6945b1165edf24329773"
+  },
+  "maPhieu": "PN118",
+  "ngayNhap": "29/12/2021",
+  "tenNV": "Phạm Ngọc Yến Nhi",
+  "tongTien": 127000
+},{
+  "_id": {
+    "$oid": "61d064e4f770b478f6a52409"
+  },
+  "maPhieu": "PN898",
+  "ngayNhap": "01/01/2022",
+  "tenNV": "Phạm Ngọc Yến Nhi",
+  "tongTien": 1670000
+}]

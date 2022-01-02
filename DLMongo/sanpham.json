@@ -1,0 +1,37 @@
+[{
+  "_id": {
+    "$oid": "61bde11b018d3c30cd0a21af"
+  },
+  "maSP": "SP001",
+  "tenSP": "Quần áo",
+  "soLuong": "100",
+  "donGia": "100000",
+  "maPN": "PN665"
+},{
+  "_id": {
+    "$oid": "61bdff9076252717d5139eff"
+  },
+  "maSP": "SP002",
+  "tenSP": "Giày bata",
+  "soLuong": "30",
+  "donGia": "127000",
+  "maPN": "PN118"
+},{
+  "_id": {
+    "$oid": "61d064e4f770b478f6a52407"
+  },
+  "maSP": "SP567",
+  "tenSP": "Giày sandal",
+  "donGia": "80000",
+  "soLuong": "5",
+  "maPN": "PN898"
+},{
+  "_id": {
+    "$oid": "61d064e4f770b478f6a52408"
+  },
+  "maSP": "SP244",
+  "tenSP": "Váy Maxi West",
+  "donGia": "127000",
+  "soLuong": "10",
+  "maPN": "PN898"
+}]

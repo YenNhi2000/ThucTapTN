@@ -1,0 +1,10 @@
+[{
+  "_id": {
+    "$oid": "61c34b62cb395b8ffc03ea10"
+  },
+  "email": "admin@gmail.com",
+  "password": "admin",
+  "address": "Xã Tân Hiệp, huyện Phú Giáo, tỉnh Bình Dương",
+  "name": "Phạm Ngọc Yến Nhi",
+  "phone": "0333599035"
+}]

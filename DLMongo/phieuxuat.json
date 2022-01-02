@@ -1,0 +1,17 @@
+[{
+  "_id": {
+    "$oid": "61cc7169df2a9a44256d9623"
+  },
+  "maPhieu": "PX944",
+  "ngayXuat": "29/12/2021",
+  "tenNV": "Phạm Ngọc Yến Nhi",
+  "tongTien": 760000
+},{
+  "_id": {
+    "$oid": "61d0750fa858432f489b5f86"
+  },
+  "maPhieu": "PX613",
+  "ngayXuat": "01/01/2022",
+  "tenNV": "Phạm Ngọc Yến Nhi",
+  "tongTien": 381000
+}]
